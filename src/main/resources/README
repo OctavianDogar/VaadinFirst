@@ -1,0 +1,18 @@
+Please add your static resources here
+
+To run jetty in intelij:
+
+1: Download latest relase https://www.eclipse.org/jetty/download.html
+2: Get the zip version and unarchive
+3: Select jetty remote run on edit configs
+4: Add maven jetty:run goal in config
+5: Put --module=jmx in start.ini file at the decompressed directory
+6: Set JVM options: -Dcom.sun.management.jmxremote= -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+ (if local)
+7: Run from terminal with mvn -Djetty.port=8888 jetty:run
+
+
+For Jrebel:
+1. Add pluggin in pom
+2. Change class ann build again
+3. Reload app in browser
